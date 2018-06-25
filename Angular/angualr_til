@@ -1,0 +1,11 @@
+# ngFor 구문에서 limit 으로 for문 동작 제어#
+
+```
+<div *ngFor=" let day of days;  let i=index">
+    <div *ngIf="i<2">
+        {{day}}
+    </div>
+</div>
+```
+
+혹은 ngTemplate으로 사용해도 된다고 함
