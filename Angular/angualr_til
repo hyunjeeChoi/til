@@ -9,3 +9,10 @@
 ```
 
 혹은 ngTemplate으로 사용해도 된다고 함
+
+# ngIf else 사용 #
+```
+<div *ngIf="$userObservable | async; else loading; let user">
+  Hello {{user.last}}, {{user.first}}!
+</div>
+```
