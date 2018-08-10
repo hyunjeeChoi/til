@@ -35,3 +35,17 @@ MyHandler<?> handler = new MyHandler<>("One hundred"){
     }
 };
 ```
+
+* jshell, repl 사용 가능
+ > 유용한건지 모르겠네;
+ 
+* interface private method
+ > 인터페이스 내에서 private 메서드 사용이 가능해짐
+ 
+ ```
+ interface Interface {
+    private static String instace() {
+        return null;
+    }
+ }
+ ```
