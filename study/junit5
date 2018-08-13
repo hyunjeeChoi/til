@@ -1,0 +1,28 @@
+junit5 (https://junit.org/junit5/docs/current/user-guide/#nested-tests)
+
+* ava 8 이상에서만 동작
+* 아키텍쳐
+ > 세 개의 모듈로 구성
+  - JUnit Platform + JUnit Jupiter + JUnit Vintage
+ * JUnit platform
+ ** testing frame을 런칭하기 위해서 필수
+ ** JUnit Platform은 JUnit 플렛폼상에서 가동되는 테스팅 프레임워크를 개발하는데 필요한 TestEngine API을 정의
+ 
+ * JUnit Jupiter
+ ** JUnit4에 비교해 새로 추가된 어노테이션
+ @TestFactory : 동적 테스트들을 위한 테스트 팩토리인 메서드를 나타냄
+ @DisplayName : 테스트 클래스나 테스트 메서드를 위한 커스텀 디스플레이 네임 정의 
+ @Nested : 이 표시가 있는 클래스는 nested, no-static 테스트 클래스
+ @Tag : 필터링 테스트들을 위한 태그들을 정의
+ @ExtendWith : custom extensions를 등록할 때 사용
+ @BeforeEach : 테스트 메서드 전에 실행 (@Before와 같은 방식)
+ @AfterEach : 테스트 이후에 실행 (@After와 same)
+ @BeforeAll : 현재 클래스에서 모든 메서드 전에 실행 (@BeforeClass)
+ @AfterAll : 현재 클래스에서 모든 메서드 후에 실행 (@AfterClass)
+ @Disable : 비활성화 (@ignore)
+ 
+ * JUnit Vintage
+ ** JUnit 플랫폼에서 3, 4 기반의 테스트들이 구동되는 것을 지원
+ 
+ * assertions에 람다 표현식 사용 가능해짐
+ * assertThrows 예외에 대한 지원이 많아진듯
